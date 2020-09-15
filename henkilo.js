@@ -73,16 +73,38 @@ class Urheilija extends Henkilo {
     return kokoNimi;
   }
 
-  set etuNimet(etuNimet) {
-    this._etuNimet = etuNimet;
+  set etuNimet(arvo) {
+    this._etuNimet = arvo;
+  }
+
+  set sukuNimi(arvo) {
+    this._sukuNimi = arvo;
   }
 
   //syntymävuosi
   get syntymaVuosi() {
     return this._syntymaVuosi;
   }
-  set syntymaVuosi(syntymaVuosi) {
-    this._syntymaVuosi = syntymaVuosi;
+  set syntymaVuosi(arvo) {
+    this._syntymaVuosi = arvo;
+  }
+
+  //laji
+  get laji() {
+    return this._laji;
+  }
+
+  set laji(arvo) {
+    this._laji = arvo;
+  }
+
+  //saavutukset
+  get saavutukset() {
+    return this._saavutukset;
+  }
+
+  set saavutukset(arvo) {
+    this._saavutukset = arvo;
   }
 }
 
@@ -97,6 +119,26 @@ let sporttimake1 = new Urheilija(
   "Moninkertainen maailmanmestari"
 );
 
-console.log(sporttimake1.syntymaVuosi);
-sporttimake1.syntymaVuosi = 1700;
-console.log(sporttimake1.syntymaVuosi);
+let sporttimake2 = new Urheilija(
+  "Reetta",
+  "Hurske",
+  "Reetta",
+  1995,
+  "linkki",
+  58,
+  "Aitajuoksu",
+  "kova juoksemaan ja hyppimään"
+);
+
+let sporttimake3 = new Urheilija(
+  "Tapio",
+  "Rautavaara",
+  "Tapsa",
+  1915,
+  "https://fi.wikipedia.org/wiki/Tapio_Rautavaara",
+  80,
+  "Keihäänheitto",
+  "Olympiavoittaja, Euroopanmestari"
+);
+sporttimake1.laji("keihäänheitto");
+console.log(sporttimake1.laji);
